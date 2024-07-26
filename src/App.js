@@ -1,36 +1,21 @@
 import './App.css';
+import Header from './components/Header/Header';
 
-const Form = function () {
-  return (
-    <form>
-      <input type="text" />
-      <button>Submit</button>
-    </form>
-  );
-}
+
 
 function App() {
   return (
     <>
-      <header>
-        <img src='/images/Logo.svg' alt='Little Lemon Logo' />
-        <nav>
-          <ul>
-            <li><a href="/home">HOME</a></li>
-            <li><a href="/about">ABOUT</a></li>
-            <li><a href="/menu">MENU</a></li>
-            <li><a href="/reservations">RESERVATIONS</a></li>
-            <li><a href="/online-order">ONLINE ORDER</a></li>
-            <li><a href="/contact">LOGIN</a></li>
-          </ul>
-        </nav>
-      </header>
-      <main>
-        <h1>My App</h1>
-        <Form />
+      <Header />
+      <main className='main-content'>
+        <section className='hero-section'><div className='hero-text'><h1 className='hero-section-title'>Little Lemon</h1><p className='hero-section-subtitle'>Chicago</p></div></section>
+        <section>Specials section</section>
+        <section>Testimonials Section</section>
+        <section>about us section</section>
+
       </main>
       <footer>
-        <nav>
+        <nav id='footer' >
           <ul>
             <li><a href="/home">Home</a></li>
             <li><a href="/about">About</a></li>

@@ -1,3 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+
+:root {
+  --primary-color: #495e57;
+  --primary-color-2: #f4ce14;
+  --secondary-color: #61dafb;
+  --secondary-color-2: #ee9972;
+  --secondary-color-3: #fbdabb;
+  --secondary-color-4: #edefee;
+  --secondary-color-5: #333333;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+} /* Reset link styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remove visited link color */
+a:visited {
+  color: inherit;
+}
+
 .App {
   text-align: center;
 }
@@ -13,26 +38,44 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-item {
+  color: var(--secondary-color-5);
+  font-weight: bolder;
+  font-size: 20px;
+}
+.header-nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 28px;
+  color: ;
+}
+.main-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.hero-section {
+  background-color: var(--primary-color);
+  padding: 30px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hero-section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.hero-section-title {
+  color: var(--primary-color-2);
+  font-size: 40px;
+  font-weight: bolder;
+  margin: 0;
+}
+.hero-section-subtitle {
+  color: var(--secondary-color-4);
+  font-size: 20px;
+  font-weight: bolder;
 }
