@@ -1,0 +1,73 @@
+.not-found-container {
+  font-family: Arial, sans-serif;
+  background-color: #fffde7;
+  min-height: calc(100vh - 150px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  text-align: center;
+  padding: 20px;
+}
+.not-found-title {
+  font-size: 4em;
+  margin-bottom: 10px;
+  color: #fbc02d;
+}
+.not-found-text {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+.lemon {
+  width: 150px;
+  height: 150px;
+  background-color: #fbc02d;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  position: relative;
+  animation: bounce 2s infinite;
+}
+.lemon::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  background-color: #fff176;
+  border-radius: 50%;
+}
+.lemon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #f57f17;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.home-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #fbc02d;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+.home-button:hover {
+  background-color: #f9a825;
+}
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}

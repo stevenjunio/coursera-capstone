@@ -12,6 +12,7 @@
 
 body {
   font-family: "Karla", sans-serif;
+  margin: 0;
 } /* Reset link styles */
 a {
   text-decoration: none;
@@ -21,15 +22,6 @@ a {
 /* Remove visited link color */
 a:visited {
   color: inherit;
-}
-
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -43,39 +35,21 @@ ul {
   margin: 0;
   padding: 0;
 }
-.nav-item {
-  color: var(--secondary-color-5);
-  font-weight: bolder;
-  font-size: 20px;
-}
-.header-nav {
-  display: flex;
-  justify-content: flex-end;
-  gap: 28px;
-  color: ;
-}
+
 .main-content {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-
-.hero-section {
-  background-color: var(--primary-color);
-  padding: 30px;
-}
-.hero-section-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.hero-section-title {
-  color: var(--primary-color-2);
-  font-size: 40px;
-  font-weight: bolder;
-  margin: 0;
-}
-.hero-section-subtitle {
-  color: var(--secondary-color-4);
-  font-size: 20px;
-  font-weight: bolder;
+.cta-btn {
+  background-color: var(--primary-color-2);
+  color: var(--secondary-color-5);
+  padding: 10px 20px;
+  border-radius: 5px;
+  height: 60px;
+  border-color: transparent;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  width: 200px;
 }

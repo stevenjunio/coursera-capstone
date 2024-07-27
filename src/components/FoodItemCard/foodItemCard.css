@@ -1,0 +1,13 @@
+.food-item-card {
+  width: -moz-fit-content; /* Add this line to support Firefox and Firefox for Android */
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.food-card-text-content {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 25px;
+  background-color: var(--secondary-color-4);
+}

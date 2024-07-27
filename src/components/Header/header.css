@@ -6,3 +6,41 @@
   max-width: 1200px;
   margin: 0 auto;
 }
+
+.nav-item {
+  color: var(--secondary-color-5);
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 28px;
+}
+
+@media screen and (max-width: 910px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto;
+  }
+
+  .logo {
+    margin-left: 0;
+    align-self: center;
+  }
+
+  .nav-header {
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .header-nav {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
