@@ -29,3 +29,18 @@
 .online-menu-btn {
   margin-top: 0px;
 }
+.specials-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: space-between;
+  padding-top: 20px;
+  overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+  .specials-header {
+    flex-direction: column;
+    align-items: center;
+  }
+}

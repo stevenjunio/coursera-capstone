@@ -3,6 +3,7 @@
   width: fit-content;
   display: flex;
   flex-direction: column;
+  max-width: 300px;
 }
 
 .food-card-text-content {
@@ -10,4 +11,14 @@
   flex-direction: column;
   padding: 0px 25px;
   background-color: var(--secondary-color-4);
+}
+.order-delivery {
+  font-weight: bold;
+}
+.order-delivery-section {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: start;
+  padding: 10px 0px;
 }
