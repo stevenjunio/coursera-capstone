@@ -1,6 +1,7 @@
 import Header from "../../components/Header/Header";
 import HeroSection from "../../components/Hero/HeroSection";
 import RestaurantSpecials from "../../components/RestaurantSpecials/RestaurantSpecials";
+import Testimonials from "../../components/Testimonials/Testimonials";
 
 export default function Home() {
     return (<><Header />
@@ -8,7 +9,7 @@ export default function Home() {
             <HeroSection />
 
             <RestaurantSpecials />
-            <section>Testimonials Section</section>
+            <Testimonials />
             <section>about us section</section>        </main>
         <footer>
             <nav id='footer' >

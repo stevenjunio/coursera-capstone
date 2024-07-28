@@ -1,0 +1,17 @@
+.testimonials-main-container {
+  background-color: var(--secondary-color-4);
+  padding: 150px 20px;
+}
+
+.testimonials-header {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.testimonials {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  overflow-x: auto;
+}

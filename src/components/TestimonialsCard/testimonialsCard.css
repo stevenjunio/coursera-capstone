@@ -1,0 +1,19 @@
+.testimonials-card {
+  background-color: white;
+  padding: 24px;
+  width: 200px;
+  min-width: 150px;
+}
+
+.reviewer-details {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  gap: 8px;
+}
+
+.review-rating {
+  display: flex;
+  gap: 4px;
+  margin: 0px 0px 16px 0px;
+}
