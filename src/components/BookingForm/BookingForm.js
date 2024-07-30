@@ -1,18 +1,33 @@
+import { redirect, useNavigate, } from "react-router-dom";
+import { submitAPI } from "../../utils/api";
 import "./bookingform.css";
 import { useState } from "react";
+
+
+
+
 
 export default function BookingForm({ availableTimes, setAvailableTimes }) {
     const [date, setDate] = useState(new Date().toISOString().split("T")[0]);
     const [time, setTime] = useState("");
     const [guests, setGuests] = useState("1");
     const [occasion, setOccasion] = useState("");
+    const [submitted, setSubmitted] = useState(false);
+
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
         console.log(date, time, guests, occasion);
+        navigate("/reservation-confirmed");
+        if (submitAPI(e.formData))
+            setSubmitted(true);
+
+
     };
 
-    return (
+    return (<>
         <form className="booking-form" onSubmit={handleSubmit}>
             <h1>Book a table</h1>
             <label htmlFor="res-date">Choose date</label>
@@ -63,5 +78,6 @@ export default function BookingForm({ availableTimes, setAvailableTimes }) {
             </select>
             <input className="cta-btn" type="submit" value="Make Your reservation" style={{ width: "fit-content" }} />
         </form>
-    );
+
+    </>);
 }

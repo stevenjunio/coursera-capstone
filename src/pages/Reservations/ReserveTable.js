@@ -2,23 +2,12 @@ import { useReducer } from "react";
 import BookingForm from "../../components/BookingForm/BookingForm";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
+import { fetchAPI } from "../../utils/api";
 
 const initializeTimes = () => {
-    return [
-        "12:00",
-        "12:30",
-        "13:00",
-        "13:30",
-        "14:00",
-        "14:30",
-        "15:00",
-        "15:30",
-        "16:00",
-        "16:30",
-        "17:00",
-        "17:30",
-        "18:00",
-    ];
+    console.log(`random`,);
+
+    return fetchAPI(new Date())
 };
 
 function reducer(state, action) {
@@ -52,7 +41,7 @@ export default function ReserveTable() {
     return (
         <>
             <Header />
-            <main style={{ minHeight: "54vh" }}>
+            <main style={{ minHeight: "50vh" }}>
                 <BookingForm
                     availableTimes={availableTimes}
                     setAvailableTimes={updateTimes}
