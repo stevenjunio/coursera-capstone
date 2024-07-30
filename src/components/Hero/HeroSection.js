@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./herosection.css";
 
 export default function HeroSection() {
@@ -10,10 +11,17 @@ export default function HeroSection() {
                     <p className="hero-section-text">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                         eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </p>{" "}
-                    <button className="cta-btn">Reserve a Table</button>
+                    </p>
+                    <Link
+                        className="cta-btn"
+                        style={{ height: "60px", alignContent: "center" }}
+                        to={"/reservations"}
+                    >
+                        Reserve a Table
+                    </Link>
                 </div>
-                <img className="hero-image"
+                <img
+                    className="hero-image"
                     src="/images/little-lemons-restaurant-food.png"
                     alt="Little lemons restaurant food"
                 />
