@@ -1,4 +1,4 @@
-import { redirect, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { submitAPI } from "../../utils/api";
 import "./bookingform.css";
 import { useState } from "react";
