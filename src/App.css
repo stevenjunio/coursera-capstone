@@ -52,4 +52,9 @@ ul {
   font-size: 18px;
   text-align: center;
   width: 200px;
+  cursor: pointer;
+}
+.cta-btn:disabled {
+  background-color: var(--primary-color);
+  color: var(--secondary-color-5);
 }

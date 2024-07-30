@@ -1,4 +1,4 @@
-import { useReducer } from "react";
+import { useEffect, useReducer } from "react";
 import BookingForm from "../../components/BookingForm/BookingForm";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
@@ -31,7 +31,9 @@ function reducer(state, action) {
 
 export default function ReserveTable() {
     const [availableTimes, dispatch] = useReducer(reducer, initializeTimes());
-    console.log(availableTimes);
+    useEffect(() => {
+        document.title = "Reserve a table";
+    }, []);
 
     const updateTimes = (date) => {
         console.log(`the date is ${date}`);

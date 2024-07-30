@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import AboutUs from "../../components/AboutUs/AboutUs";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
@@ -6,6 +7,10 @@ import RestaurantSpecials from "../../components/RestaurantSpecials/RestaurantSp
 import Testimonials from "../../components/Testimonials/Testimonials";
 
 export default function Home() {
+    useEffect(() => {
+        document.title = "Little Lemon Restaurant - Chicago";
+    }, []);
+
     return (
         <>
             <Header />

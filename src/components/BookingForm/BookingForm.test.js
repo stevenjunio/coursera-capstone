@@ -64,3 +64,33 @@ test("users can submit and get redirected to confirmation page", async () => {
     const confirmationMessage = await screen.findByText(/Booking confirmed/i);
     expect(confirmationMessage).toBeInTheDocument();
 });
+
+test("validate that correct attributes are set on form elements", () => {
+    render(<MemoryRouter><BookingForm availableTimes={[
+        "12:00",
+        "12:30",
+        "13:00",
+        "13:30",
+        "14:00",
+        "14:30",
+        "15:00",
+        "15:30",
+        "16:00",
+        "16:30",
+        "17:00",
+        "17:30",
+        "18:00",
+    ]} /></MemoryRouter>)
+
+    const dateInput = screen.getByLabelText(/Choose date/i);
+    const timeInput = screen.getByLabelText(/Choose time/i);
+    const guestsInput = screen.getByLabelText(/Number of guests/i);
+
+    expect(dateInput).toHaveAttribute("type", "date");
+    expect(dateInput).toHaveAttribute("required");
+    expect(timeInput).toHaveAttribute("required");
+    expect(guestsInput).toHaveAttribute("type", "number");
+    expect(guestsInput).toHaveAttribute("required");
+    expect(guestsInput).toHaveAttribute("min", "1");
+    expect(guestsInput).toHaveAttribute("max", "10");
+});
